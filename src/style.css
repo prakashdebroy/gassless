@@ -1,0 +1,70 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #00008b; /* Dark Blue Background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Centered Login Container */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Animated RGB Text */
+.rgb-text {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: linear-gradient(270deg, red, green, blue, red);
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rgbRotate 3s linear infinite;
+  display: inline-block;
+}
+
+/* Buttons */
+.login-button {
+  background: transparent;
+  color: white;
+  padding: 0.8rem;
+  width: 250px;
+  border: 3px solid;
+  border-image-source: linear-gradient(90deg, red, blue, green);
+  border-image-slice: 1;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Input Field */
+.login-input {
+  padding: 0.8rem;
+  width: 250px;
+  border: 2px solid white;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+  text-align: center;
+}
+
+/* RGB Animation Keyframes */
+@keyframes rgbRotate {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
